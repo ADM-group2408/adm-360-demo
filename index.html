@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f5f2" />
+    <meta
+      name="description"
+      content="ADM Group interactive 360 demo tour for ADM Demo Residence."
+    />
+    <title>ADM Group | ADM Demo Residence</title>
+    <link rel="stylesheet" href="assets/vendor/pannellum.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ADM Group home">
+        <span class="brand-mark" aria-hidden="true">ADM</span>
+        <span class="brand-text">ADM Group</span>
+      </a>
+      <div class="header-meta">
+        <span class="demo-badge">Demo property</span>
+        <span class="header-code">ADM / 360 / 01</span>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="intro-band" aria-labelledby="tour-title">
+        <div>
+          <p class="eyebrow">ADM visual presentation prototype</p>
+          <h1 id="tour-title">ADM Demo Residence</h1>
+          <p class="intro-copy">
+            A fictional property tour built to validate room navigation, viewing flow and the future handoff to ADM panoramas.
+          </p>
+        </div>
+        <div class="intro-note">
+          <span class="note-index">01</span>
+          <span>Open the rooms from the plan or hotspots inside the panorama.</span>
+        </div>
+      </section>
+
+      <section class="tour-layout" aria-label="ADM Demo Residence 360 tour">
+        <div class="viewer-panel">
+          <div class="viewer-toolbar">
+            <div>
+              <span class="section-label">Now viewing</span>
+              <strong id="scene-title">Hallway</strong>
+            </div>
+            <div class="viewer-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="scene-status">After panorama</span>
+            </div>
+          </div>
+          <div id="panorama" class="panorama" aria-label="Interactive 360 panorama"></div>
+          <div class="viewer-caption">
+            <span id="scene-caption">Interior reference panorama · external demo data</span>
+            <span class="viewer-hint">Drag to look around · Pinch or scroll to zoom</span>
+          </div>
+        </div>
+
+        <aside class="tour-sidebar">
+          <section class="side-section rooms-section" aria-labelledby="rooms-title">
+            <div class="side-heading">
+              <div>
+                <span class="section-label">Scene index</span>
+                <h2 id="rooms-title">Rooms</h2>
+              </div>
+              <span class="scene-count">03</span>
+            </div>
+            <div id="room-list" class="room-list"></div>
+          </section>
+
+          <section class="side-section plan-section" aria-labelledby="plan-title">
+            <div class="side-heading">
+              <div>
+                <span class="section-label">Navigation</span>
+                <h2 id="plan-title">Residence plan</h2>
+              </div>
+              <span class="north-marker">N</span>
+            </div>
+            <div class="floor-plan" role="img" aria-label="Fictional three-room floor plan">
+              <span class="plan-wall plan-wall-main" aria-hidden="true"></span>
+              <span class="plan-wall plan-wall-cross" aria-hidden="true"></span>
+              <span class="plan-wall plan-wall-short" aria-hidden="true"></span>
+              <span class="plan-line plan-line-one" aria-hidden="true"></span>
+              <span class="plan-line plan-line-two" aria-hidden="true"></span>
+              <button class="plan-node node-hallway" data-scene="hallway" aria-label="Open Hallway">
+                <span>H</span><small>Hallway</small>
+              </button>
+              <button class="plan-node node-living" data-scene="living" aria-label="Open Living Room">
+                <span>L</span><small>Living</small>
+              </button>
+              <button class="plan-node node-bedroom" data-scene="bedroom" aria-label="Open Bedroom">
+                <span>B</span><small>Bedroom</small>
+              </button>
+            </div>
+          </section>
+
+          <section class="side-section demo-section" aria-labelledby="demo-note-title">
+            <span class="section-label">Prototype note</span>
+            <h2 id="demo-note-title">Demo data</h2>
+            <p>These room labels use open interior references from different locations. They do not describe one real apartment.</p>
+            <span class="architecture-note">beforePanorama / afterPanorama ready</span>
+          </section>
+        </aside>
+      </section>
+
+      <section id="contact" class="cta-band" aria-labelledby="cta-title">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2 id="cta-title">Turn a viewing into a clearer decision.</h2>
+          <p>Tell ADM Group where this tour should go next: your own rooms, your own floor plan and a presentation built for the listing.</p>
+        </div>
+        <form id="cta-form" class="cta-form">
+          <label>
+            <span>Your name</span>
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Contact</span>
+            <input name="contact" type="text" autocomplete="email" required />
+          </label>
+          <button type="submit" class="cta-button">
+            <span>Start a property tour</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 4.5 16 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p id="form-message" class="form-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>ADM Group</span>
+      <span>ADM Demo Residence / Internal prototype</span>
+    </footer>
+
+    <script src="assets/vendor/pannellum.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
